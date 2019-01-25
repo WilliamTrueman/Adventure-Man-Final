@@ -50,7 +50,7 @@ var levelOne = {
     //  We're going to be using physics, so enable the Arcade Physics system
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
-    //  A simple background for our game
+  
     game.add.sprite(0, 0, 'background');
 
     //  The platforms group contains the ground and the 2 ledges we can jump on
