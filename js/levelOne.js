@@ -53,15 +53,16 @@ var levelOne = {
     //  Background
     game.add.sprite(0, 0, 'background');
 
-    
+
     platforms = game.add.group();
+
 
     platforms.enableBody = true;
 
     // Creating the ground
     var ground = platforms.create(0, game.world.height - 64, 'ground');
 
-    // Scaling to fit the screen
+    //  Scaling to fit the screen.
     ground.scale.setTo(2, 2);
 
     //  Stops it floating away if hit
@@ -79,15 +80,15 @@ var levelOne = {
 
 
 
-    // STARS
+    //  STARS
     stars = game.add.group();
 
-  
+
     stars.enableBody = true;
 
-    
 
-     
+
+        //  Create a star inside of the 'stars' group
         star = stars.create(140,500,'star');
         star = stars.create(100,300,'star');
         star = stars.create(400,300,'star');
@@ -165,10 +166,10 @@ var levelOne = {
     // The player and its settings
         player = game.add.sprite(32, game.world.height - 150, 'dude');
 
-       
+
         game.physics.arcade.enable(player);
 
-        
+        //  Player physics properties.
         player.body.bounce.y = 0.2;
         player.body.gravity.y = 300;
         player.body.collideWorldBounds = true;

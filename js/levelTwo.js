@@ -56,28 +56,28 @@ var levelTwo = {
 
 
 
-        
+
         game.physics.startSystem(Phaser.Physics.ARCADE);
 
-     
+
         game.add.sprite(0, 0, 'background');
 
-        
+
         platforms = game.add.group();
 
-    
+
         platforms.enableBody = true;
 
-        
+
         var ground = platforms.create(0, game.world.height - 64, 'ground');
 
-     
+
         ground.scale.setTo(2, 2);
 
-     
+
         ground.body.immovable = true;
 
-        
+
         var ledge = platforms.create(100, 320, 'ground');
         ledge.body.immovable = true;
         ledge.scale.setTo(0.5,1);
@@ -98,15 +98,15 @@ var levelTwo = {
         ledge.scale.setTo(0.5,1);
 
 
-        
+
         stars = game.add.group();
 
-      
+
         stars.enableBody = true;
 
-    
 
-      
+
+
         star = stars.create(140,500,'star');
         star = stars.create(320,500,'star');
         star = stars.create(230,35,'star');
@@ -213,18 +213,18 @@ var levelTwo = {
 
 
 
-      
+
         player = game.add.sprite(700, game.world.height -  700, 'dude');
 
-        
+
         game.physics.arcade.enable(player);
 
-     .
+
         player.body.bounce.y = 0.2;
         player.body.gravity.y = 300;
         player.body.collideWorldBounds = true;
 
-        //  Our two animations, walking left and right.
+
         player.animations.add('left', [0, 1, 2, 3], 10, true);
         player.animations.add('right', [5, 6, 7, 8], 10, true);
 
